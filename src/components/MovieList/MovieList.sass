@@ -2,23 +2,41 @@
     width: 80%
     margin: 0 auto
     margin-top: 50px
-    border-color: #072744
-
+    border: none
+    border-radius: 5px
+    box-shadow: 5px 5px 5px #d0d1d1ce
 
 .ant-list-header
-    background-color: #001529
+    background: rgb(255,255,255)
+    background: linear-gradient(0deg, rgba(232,239,240,1) 0%, rgba(181,210,211,1) 13%, rgba(73,147,149,1) 74%, rgba(15,113,115,1) 100%)
     text-align: center
+    border-radius: 5px 5px 0 0
     h2
         margin: 0
         color: white
 
 .ant-list-items
     height: 65vh
-    overflow: scroll
+    overflow: auto
 
 .movie-list__movie
     .ant-list-item-meta
         align-items: center
     .ant-list-item-meta-title
         margin: 0
+        
+.ant-btn-primary 
+    background-color: #a7122b
+    border-color: #a7122b
+    &:hover, &:focus, &:active
+        background-color: #d11d3b
+        border-color: #d11d3b
+
+.ant-list-items::-webkit-scrollbar
+    width: 5px
+    height: 5px
+
+.ant-list-items::-webkit-scrollbar-thumb 
+    background: #499395
+    border-radius: 2px
 

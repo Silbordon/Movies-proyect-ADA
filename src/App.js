@@ -18,8 +18,7 @@ function App() {
   return (
     <Layout>
       <Router>
-        <Header style={{zIndex:1}}
->
+        <Header className='header'>
           <MenuTop />
         </Header>
         <Content>

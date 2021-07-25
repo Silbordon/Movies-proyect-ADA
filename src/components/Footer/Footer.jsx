@@ -8,7 +8,7 @@ const {Footer} = Layout;
 
     return (
         <Footer className="footer">
-            <p>Mari y Silvi</p>
+            <p>Hecho por Mari y Silvi  🎬</p>
             
         </Footer>
     );

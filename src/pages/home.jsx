@@ -21,10 +21,10 @@ const Home = () => {
            <SliderMovies newMovies={newMovies} />
            <Row>
                <Col span={12}>
-                    <MovieList title="Peliculas Populares" urlMovieList={popularMovies} />
+                    <MovieList title="Popular Movies" urlMovieList={popularMovies} />
                </Col>
                <Col span={12}>
-                    <MovieList title="Top Mejores Peliculas" urlMovieList={topRankedMovies} />
+                    <MovieList title="Top Best Movies" urlMovieList={topRankedMovies} />
                </Col>
            </Row>
            <Footer />
