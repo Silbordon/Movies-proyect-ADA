@@ -6,7 +6,6 @@ const Loading = () => {
     return (
         <div className="loading">
             <Spin size="large" />
-            <h4>Cargando ...</h4>
         </div>
     );
 };

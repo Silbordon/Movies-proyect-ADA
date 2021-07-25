@@ -4,13 +4,18 @@ import Loading from "../Loading";
 import "./MovieCard.sass";
 
 const MovieCard = (props) => {
-  const { url } = props;
+  const { url, loadingState } = props;
   const { results } = url;
 
   if (!results) {
-    return <Loading />;
+    return (
+      <div className= {!loadingState ? "hidden" : null}>
+        <Loading  />
+      </div>
+    )
   }
 
+  console.log(loadingState);
   return (
     <Row gutter={[8, 32]}>
       {results.map((movie) => (
@@ -26,12 +31,12 @@ const CardMovie = (props) => {
   const {
     movie: { id, title, poster_path },
   } = props;
-  
+
   let backdropPath;
 
-  if (poster_path === null){
+  if (poster_path === null) {
     backdropPath = 'https://i.pinimg.com/736x/04/85/5b/04855bae4a3237935ebfc655293400ca.jpg'
-  } else{
+  } else {
     backdropPath = `https://image.tmdb.org/t/p/original${poster_path}`;
   }
   return (
