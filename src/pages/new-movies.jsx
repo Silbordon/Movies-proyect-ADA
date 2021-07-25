@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 const NewMovies = () => {
   const [page, setPage] = useState(1);
   const [url, setUrl] = useState([]);
+  const [loadingState, setLoadingState] = useState(true)
+
 
   useEffect(() => {
     (async () => {
@@ -14,6 +16,7 @@ const NewMovies = () => {
         `${URL_API}/movie/now_playing?api_key=${API_KEY}&languaje=en-ES&page=${page}`
       );
       const movies = await response.json();
+      setLoadingState(false)
       setUrl(movies);
     })();
   }, [page]);
@@ -24,7 +27,7 @@ const NewMovies = () => {
     <div>
       <div className="margen">
         <h1>New Movies</h1>
-        <MovieCard url={url} />
+        <MovieCard url={url} loadingState={loadingState} />
         <PaginationMovie
           currentPage={url.page}
           totalItems={url.total_results}
