@@ -39,7 +39,7 @@ const Movie = (props) => {
             <h2>{title}</h2>
             <p>{overview}</p>
             <Link to={`/movie/${id}`}>
-              <Button type="primary">Ver mas... </Button>
+              <Button type="primary" className='boton'>More</Button>
             </Link>
           </div>
         </div>

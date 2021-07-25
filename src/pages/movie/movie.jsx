@@ -1,14 +1,13 @@
-import { Row, Col, Button } from 'antd';
-import { PlayCircleOutlined } from '@ant-design/icons'
-import { useParams, } from 'react-router-dom';
-import moment from 'moment';
-import useFetch from '../../hooks/useFetch';
-import './movie.sass';
-import { URL_API, API_KEY } from '../../utils/constants';
-import Loading from '../../components/Loading';
-import ModalVideo from '../../components/ModalVideo';
-import { useState } from 'react';
-
+import { Row, Col, Button } from "antd";
+import { PlayCircleOutlined } from "@ant-design/icons";
+import { useParams } from "react-router-dom";
+import moment from "moment";
+import useFetch from "../../hooks/useFetch";
+import "./movie.sass";
+import { URL_API, API_KEY } from "../../utils/constants";
+import Loading from "../../components/Loading";
+import ModalVideo from "../../components/ModalVideo";
+import { useState } from "react";
 
 const Movie = () => {
   const { id } = useParams(); //nos da el ID
@@ -53,7 +52,13 @@ const RenderMovie = (props) => {
 
 const PosterMovie = (props) => {
   const { image } = props;
-  const posterPath = `https://image.tmdb.org/t/p/original${image}`;
+  let posterPath;
+  if (image === null) {
+    posterPath =
+      "https://i.pinimg.com/736x/04/85/5b/04855bae4a3237935ebfc655293400ca.jpg";
+  } else {
+    posterPath = `https://image.tmdb.org/t/p/original${image}`;
+  }
   console.log(posterPath);
 
   return <div style={{ backgroundImage: `url('${posterPath}')` }}></div>;
@@ -80,8 +85,12 @@ const MovieInfo = (props) => {
       if (videoMovie.result.results.length > 0) {
         return (
           <div>
-            <Button icon={<PlayCircleOutlined />} onClick={openModal} className='button'>
-              ver trailer
+            <Button
+              icon={<PlayCircleOutlined />}
+              onClick={openModal}
+              className="button"
+            >
+              trailer
             </Button>
             <ModalVideo
               videoKey={videoMovie.result.results[0].key}
@@ -105,12 +114,12 @@ const MovieInfo = (props) => {
       </div>
       <div className="content">
         <h3>General</h3>
-        <p>{overview}</p>
-        <h3>Generos</h3>
+        <p>{overview === "" ? "No information" : overview}</p>
+        <h3>Genres</h3>
         <ul>
-          {genres.map((gender) => (
-            <li key={gender.id}>{gender.name}</li>
-          ))}
+          {genres.length === 0
+            ? "No information"
+            : genres.map((gender) => <li key={gender.id}>{gender.name}</li>)}
         </ul>
       </div>
     </div>

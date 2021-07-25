@@ -2,12 +2,33 @@
     display: flex
     width: 100%
     height: inherit
+
     &__logo
         display: flex
         margin-right: 40px
+        margin-top: -19px
+        width: 75px
 
 .logo2
-    height: 60px
-        
+    background-image: url('../../assets/logo-movies.png')
+    height: 100px
+    width: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    
+
 .ant-menu
     width: 100%
+    
+.ant-menu-item
+    font-size: 21px
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected
+    background-color: #a7122b
+    color: white
+
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item:hover 
+    background-color: #d80c2e
+    color: white
+
