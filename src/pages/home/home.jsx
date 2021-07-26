@@ -1,9 +1,10 @@
-import useFetch from "../hooks/useFetch";
-import SliderMovies from '../components/SliderMovies'
-import { URL_API, API_KEY } from '../utils/constants'
-import MovieList from "../components/MovieList/MovieList";
+import { URL_API, API_KEY } from '../../utils/constants'
 import { Row, Col } from "antd";
-import Footer from '../components/Footer'
+import useFetch from "../../hooks/useFetch";
+import MovieList from "../../components/MovieList/MovieList";
+import SliderMovies from '../../components/SliderMovies'
+import Footer from '../../components/Footer';
+import './home.sass'
 
 const Home = () => {
 
@@ -20,10 +21,10 @@ const Home = () => {
         <div>
            <SliderMovies newMovies={newMovies} />
            <Row>
-               <Col span={12}>
+               <Col xs={24} sm={24} md={12} lg={12}>
                     <MovieList title="Popular Movies" urlMovieList={popularMovies} />
                </Col>
-               <Col span={12}>
+               <Col xs={24} sm={24} md={12} lg={12}>
                     <MovieList title="Top Best Movies" urlMovieList={topRankedMovies} />
                </Col>
            </Row>

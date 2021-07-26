@@ -11,7 +11,6 @@ body::-webkit-scrollbar{
 }
 body::-webkit-scrollbar-thumb {
   background: #ccc;
-  /* border-radius: 4px; */
 }
 
 a{
@@ -27,4 +26,10 @@ a{
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media ( max-width: 400px){
+  .header{
+    padding: 0 20px;
+  }
 }
