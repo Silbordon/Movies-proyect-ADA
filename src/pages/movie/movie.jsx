@@ -41,7 +41,7 @@ const RenderMovie = (props) => {
           <Col span={8} offset={3} className="movie__poster">
             <PosterMovie image={poster_path} />
           </Col>
-          <Col span={9}>
+          <Col span={9} className="movie-info-container">
             <MovieInfo movieInfo={props.movieInfo} />
           </Col>
         </Row>
@@ -61,7 +61,7 @@ const PosterMovie = (props) => {
   }
   console.log(posterPath);
 
-  return <div style={{ backgroundImage: `url('${posterPath}')` }}></div>;
+  return <div style={{ backgroundImage: `url('${posterPath}')` }} className="movie-poster-image"></div>;
 };
 
 const MovieInfo = (props) => {
@@ -104,7 +104,7 @@ const MovieInfo = (props) => {
     }
   };
   return (
-    <div>
+    <div className="movie-info">
       <div className="info">
         <h1>
           {title}
