@@ -24,11 +24,11 @@ function App() {
         </Header>
         <Content style={{minHeight:'fit-content'}}>
           <Switch>
-            <Route exact={true} path="Movies-proyect-ADA/" component={Home} />
-            <Route exact={true} path="Movies-proyect-ADA/new-movies" component={NewMovies} />
-            <Route exact={true} path="Movies-proyect-ADA/popular" component={Popular} />
-            <Route exact={true} path="Movies-proyect-ADA/search" component={Search} />
-            <Route exact={true} path="Movies-proyect-ADA/movie/:id" component={Movie} />
+            <Route exact={true} path="/" component={Home} />
+            <Route exact={true} path="/new-movies" component={NewMovies} />
+            <Route exact={true} path="/popular" component={Popular} />
+            <Route exact={true} path="/search" component={Search} />
+            <Route exact={true} path="/movie/:id" component={Movie} />
             <Route path="*" component={Error404} />
           </Switch>
         </Content>
