@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { URL_API, API_KEY } from "../utils/constants";
 import MovieCard from "../components/MovieCard";
 import PaginationMovie from "../components/PaginationMovie";
-import Footer from "../components/Footer";
 
 const NewMovies = () => {
   const [page, setPage] = useState(1);
@@ -24,7 +23,7 @@ const NewMovies = () => {
 
   return (
     <div>
-      <div style={{ minHeight: "74.5vh" }}>
+      <div style={{ minHeight: "calc(100vh - 140px)" }}>
         <h1>New Movies</h1>
         <MovieCard url={url} loadingState={loadingState} />
         <PaginationMovie
@@ -33,7 +32,6 @@ const NewMovies = () => {
           onChangePage={onChangePage}
         />
       </div>
-      <Footer />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { Input } from "antd";
 import { VideoCameraFilled } from "@ant-design/icons";
 import MovieCard from "../../components/MovieCard";
 import PaginationMovie from "../../components/PaginationMovie";
-import Footer from "../../components/Footer";
 import "./search.sass";
 
 const Search = () => {
@@ -48,9 +47,6 @@ const Search = () => {
           totalItems={url.total_results}
           onChangePage={onChangePage}
         />
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

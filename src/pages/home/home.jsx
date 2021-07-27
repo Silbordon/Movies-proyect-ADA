@@ -3,7 +3,6 @@ import { Row, Col } from "antd";
 import useFetch from "../../hooks/useFetch";
 import MovieList from "../../components/MovieList/MovieList";
 import SliderMovies from "../../components/SliderMovies";
-import Footer from "../../components/Footer";
 import "./home.sass";
 
 const Home = () => {
@@ -19,7 +18,7 @@ const Home = () => {
   return (
     <div>
       <SliderMovies newMovies={newMovies} />
-      <Row>
+      <Row style={{marginBottom:'50px'}}>
         <Col xs={24} sm={24} md={12} lg={12}>
           <MovieList title="Popular Movies" urlMovieList={popularMovies} />
         </Col>
@@ -27,7 +26,6 @@ const Home = () => {
           <MovieList title="Top Best Movies" urlMovieList={topRankedMovies} />
         </Col>
       </Row>
-      <Footer />
     </div>
   );
 };

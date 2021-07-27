@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { URL_API, API_KEY } from "../utils/constants";
 import MovieCard from "../components/MovieCard";
 import PaginationMovie from "../components/PaginationMovie";
-import Footer from "../components/Footer";
 
 const Popular = () => {
   const [page, setPage] = useState(1);
@@ -33,7 +32,6 @@ const Popular = () => {
           onChangePage={onChangePage}
         />
       </div>
-      <Footer />
     </div>
   );
 };
