@@ -10,7 +10,7 @@ import Popular from "./pages/popular";
 import Search from "./pages/search";
 
 //components
-import MenuTop from './components/MenuTop'
+import MenuTop from "./components/MenuTop";
 
 function App() {
   const { Header, Content } = Layout;
@@ -18,7 +18,7 @@ function App() {
   return (
     <Layout>
       <Router>
-        <Header className='header'>
+        <Header className="header">
           <MenuTop />
         </Header>
         <Content>
@@ -31,7 +31,6 @@ function App() {
             <Route path="*" component={Error404} />
           </Switch>
         </Content>
-      
       </Router>
     </Layout>
   );

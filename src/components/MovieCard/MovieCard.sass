@@ -1,6 +1,3 @@
-.margen
-    margin: auto
-    margin-left: 20px
 h1
     text-align: center
     margin: 25px 0
@@ -17,6 +14,11 @@ h1
 .card
     background-color: #0F7173
     overflow: hidden
+    height: 420px
+    width: 240px
+
+.img-card
+    height: 350px
 
 .ant-card-meta-title 
     color: white
@@ -24,3 +26,19 @@ h1
 
 .hidden
     display: none
+
+@media ( max-width: 850px )
+    .card
+        height: 310px
+        width: 180px
+    .img-card
+        height: 260px
+    .ant-card-body
+        padding: 4px
+
+    .centrar
+        flex-direction: row
+        div
+            max-width: 240px
+
+    

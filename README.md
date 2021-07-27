@@ -4,7 +4,7 @@
 <br>
 
 ## Haciendo click [acá]() podrás verlo andar y buscar la infomación de tus películas favoritas!🍿🎬🎥
-![Movie App]()
+![Movie App](./public/movie-app.png)
 
 ### 📍***Este proyecto utiliza las siguientes dependencias:***
 📁 [React Router](https://reactrouter.com/)
