@@ -1,5 +1,5 @@
 .movie
-  height: calc( 100vh - 64px )
+  height: calc( 100vh - 115px )
   background-repeat: no-repeat
   background-position: center
   background-size: cover
@@ -29,16 +29,22 @@
   display: flex !important
   height: 100% !important
   align-items: center !important
+  width: 100%
+
+.ant-col-9
+  max-width: 50%
 
 .info
   display: flex
   align-items: center
   justify-content: space-between
   height: 70%
+
   h1
     color: white
     margin: 0
     font-size: 2.5em
+
     span
       font-size: 20px
       margin-left: 12px
@@ -51,6 +57,7 @@
   border: 0
   font-size: 16px
   padding: 0 4px
+
   &:hover,
   &:focus,
   &:active
@@ -58,15 +65,88 @@
     color: #d80c2e
     outline: none
     border: none
+
   &:hover
     cursor: pointer
 
 .content
   margin-top: 50px
+
   h3
     font-weight: bold
     font-size: 24p
     color: white
+
   p, ul
     color: white
     font-size: 15px
+
+// MEDIA
+
+@media ( max-width: 1250px )
+  .fila
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+
+  .movie
+    &__poster
+      align-self: center
+      margin-left: 0
+      margin-right: 0
+
+  .ant-col-9
+    max-width: 80%
+
+  .movie-info-container
+    width: 75%
+
+  .movie-info
+    width: 100%
+
+  .button
+    font-size: 25px
+    padding: 0
+
+  .info
+    flex-direction: column
+    font-size: 25px
+    
+  .content
+    margin-top: 10px
+    font-size: 25px
+    p, ul
+      font-size: 20px
+
+@media ( max-width: 750px )
+  .movie
+    &__poster
+      margin-right: 50px
+      div
+        width: 250px
+
+@media ( max-width: 480px )
+  .movie
+    &__poster
+      div
+        margin-left: -40px
+
+  .button
+      font-size: 10px
+      padding: 0
+
+  .info, .content
+    font-size: 10px
+    p, ul
+      font-size: 10px
+
+@media ( max-width: 420px )
+  .movie
+    &__poster
+      div
+        margin-left: -40px
+
+@media ( max-width: 380px )
+  .movie-info
+    width: 100%

@@ -1,13 +1,13 @@
+import { useState } from "react";
 import { Row, Col, Button } from "antd";
 import { PlayCircleOutlined } from "@ant-design/icons";
+import { URL_API, API_KEY } from "../../utils/constants";
 import { useParams } from "react-router-dom";
 import moment from "moment";
 import useFetch from "../../hooks/useFetch";
-import "./movie.sass";
-import { URL_API, API_KEY } from "../../utils/constants";
 import Loading from "../../components/Loading";
 import ModalVideo from "../../components/ModalVideo";
-import { useState } from "react";
+import "./movie.sass";
 
 const Movie = () => {
   const { id } = useParams(); //nos da el ID
@@ -41,7 +41,7 @@ const RenderMovie = (props) => {
           <Col span={8} offset={3} className="movie__poster">
             <PosterMovie image={poster_path} />
           </Col>
-          <Col span={9}>
+          <Col span={9} className="movie-info-container">
             <MovieInfo movieInfo={props.movieInfo} />
           </Col>
         </Row>
@@ -59,9 +59,13 @@ const PosterMovie = (props) => {
   } else {
     posterPath = `https://image.tmdb.org/t/p/original${image}`;
   }
-  console.log(posterPath);
 
-  return <div style={{ backgroundImage: `url('${posterPath}')` }}></div>;
+  return (
+    <div
+      style={{ backgroundImage: `url('${posterPath}')` }}
+      className="movie-poster-image"
+    ></div>
+  );
 };
 
 const MovieInfo = (props) => {
@@ -70,7 +74,6 @@ const MovieInfo = (props) => {
       result: { title, id, release_date, overview, genres },
     },
   } = props;
-  console.log(props.movieInfo);
 
   const [isVisibleModal, setIsVisibleModal] = useState(false);
   const url = `${URL_API}/movie/${id}/videos?api_key=${API_KEY}&language=es-US`;
@@ -104,7 +107,7 @@ const MovieInfo = (props) => {
     }
   };
   return (
-    <div>
+    <div className="movie-info">
       <div className="info">
         <h1>
           {title}

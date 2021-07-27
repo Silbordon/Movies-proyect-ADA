@@ -10,7 +10,8 @@ import Popular from "./pages/popular";
 import Search from "./pages/search";
 
 //components
-import MenuTop from './components/MenuTop'
+import MenuTop from "./components/MenuTop";
+import Footer from "./components/Footer";
 
 function App() {
   const { Header, Content } = Layout;
@@ -18,10 +19,10 @@ function App() {
   return (
     <Layout>
       <Router>
-        <Header className='header'>
+        <Header className="header">
           <MenuTop />
         </Header>
-        <Content>
+        <Content style={{minHeight:'fit-content'}}>
           <Switch>
             <Route exact={true} path="/" component={Home} />
             <Route exact={true} path="/new-movies" component={NewMovies} />
@@ -31,7 +32,7 @@ function App() {
             <Route path="*" component={Error404} />
           </Switch>
         </Content>
-      
+        <Footer />
       </Router>
     </Layout>
   );

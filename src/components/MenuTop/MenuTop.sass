@@ -20,11 +20,12 @@
 
 .ant-menu
     width: 100%
+
     
 .ant-menu-item
     font-size: 21px
 
-.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected 
     background-color: #a7122b
     color: white
 
@@ -32,3 +33,15 @@
     background-color: #d80c2e
     color: white
 
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub
+    background-color: #0F7173
+    li
+        &:hover
+            background-color: #d80c2e
+
+.ant-menu-submenu-title
+    margin-right: 150px
+
+@media ( max-width: 380px )
+    .menu-top
+        justify-content: center
