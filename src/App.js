@@ -24,7 +24,7 @@ function App() {
         </Header>
         <Content style={{minHeight:'fit-content'}}>
           <Switch>
-            <Route exact={true} path="/Movies-proyect-ADA" component={Home} />
+            <Route exact={true} path="/" component={Home} />
             <Route exact={true} path="/new-movies" component={NewMovies} />
             <Route exact={true} path="/popular" component={Popular} />
             <Route exact={true} path="/search" component={Search} />
