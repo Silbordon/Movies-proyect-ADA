@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Router, Switch, Route } from "react-router-dom";
 
 //pages
 import Home from "./pages/home";
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Layout>
-      <Router>
+      <HashRouter basename="/">
         <Header className="header">
           <MenuTop />
         </Header>
@@ -33,7 +33,7 @@ function App() {
           </Switch>
         </Content>
         <Footer />
-      </Router>
+      </HashRouter>
     </Layout>
   );
 }
