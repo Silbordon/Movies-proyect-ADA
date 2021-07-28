@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import { HashRouter, Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 //pages
 import Home from "./pages/home";
